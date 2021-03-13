@@ -66,6 +66,8 @@ public class GUI implements ActionListener {
 	 * display the result in the label. It will catch NumberFormatException if the
 	 * textfield is either empty, or is not an integer. If the clear button is
 	 * clicked, it will clear both the textfield and the label for a new value.
+	 * 
+	 * @param e corresponds to which button was clicked.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -90,7 +92,7 @@ public class GUI implements ActionListener {
 	 * @param num value this method takes in.
 	 * 
 	 * @return str String this method returns. Will either return Mustang, Bronco,
-	 * MustangBronco or the value itself
+	 * MustangBronco or the value itself.
 	 */
 
 	public static String getValue(int num) {
