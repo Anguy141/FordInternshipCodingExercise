@@ -16,4 +16,4 @@ on the following algorithm:
 To run GUI:
 1. Click on the src folder
 2. Click on MustangBronco.java
-3. Click run to display GUI
+3. Click run to run GUI
