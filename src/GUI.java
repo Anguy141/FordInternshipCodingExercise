@@ -1,3 +1,4 @@
+
 /* 
  * @author Anh-Minh Tai Nguyen
  * This is the GUI class that makes the GUI.
@@ -7,6 +8,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.*;
 
@@ -43,6 +45,7 @@ public class GUI implements ActionListener {
 		start = new JButton("Start");
 		start.setActionCommand("Start");
 		start.addActionListener(this);
+		frame.getRootPane().setDefaultButton(start);
 		panel.add(start);
 
 		clear = new JButton("Clear");
@@ -81,6 +84,18 @@ public class GUI implements ActionListener {
 		} else if (e.getSource() == clear) {
 			input.setText("");
 			output.setText("");
+		}
+
+	}
+
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+			try {
+				int num = Integer.parseInt(input.getText());
+				output.setText(getValue(num));
+			} catch (NumberFormatException ex) {
+				output.setText("please enter an Integer");
+			}
 		}
 
 	}
