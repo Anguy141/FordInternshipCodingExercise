@@ -22,6 +22,10 @@ public class GUI implements ActionListener {
 	private JLabel output;
 	private JLabel message;
 
+	/*
+	 * This is the constructor used to initialize all the variables and produce the
+	 * GUI.
+	 */
 	public GUI() {
 		frame = new JFrame();
 		frame.setPreferredSize(new Dimension(400, 300));
