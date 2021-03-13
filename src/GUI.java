@@ -1,4 +1,3 @@
-
 /* 
  * @author Anh-Minh Tai Nguyen
  * This is the GUI class that makes the GUI.
