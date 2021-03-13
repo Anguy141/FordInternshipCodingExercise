@@ -1,7 +1,7 @@
 
 /* 
  * @author Anh-Minh Tai Nguyen
- * This is the GUI class that makes the GUI for the user to use.
+ * This is the GUI class that makes the GUI.
  */
 import java.awt.BorderLayout;
 import java.awt.Dimension;
