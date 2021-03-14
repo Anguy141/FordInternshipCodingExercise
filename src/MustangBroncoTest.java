@@ -9,35 +9,36 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MustangBroncoTest {
+	
 
 	@Test
 	public void test1() {
-		assertEquals("Mustang", GUI.getValue(3));
+		assertEquals("Mustang", MustangBronco.getValue(3));
 	}
 
 	@Test
 	public void test2() {
-		assertEquals("Bronco", GUI.getValue(5));
+		assertEquals("Bronco", MustangBronco.getValue(5));
 	}
 
 	@Test
 	public void test3() {
-		assertEquals("MustangBronco", GUI.getValue(15));
+		assertEquals("MustangBronco", MustangBronco.getValue(15));
 	}
 
 	@Test
 	public void test4() {
-		assertEquals("1", GUI.getValue(1));
+		assertEquals("1", MustangBronco.getValue(1));
 	}
 
 	@Test
 	public void test5() {
-		assertEquals("MustangBronco", GUI.getValue(0));
+		assertEquals("MustangBronco", MustangBronco.getValue(0));
 	}
 
 	@Test
 	public void test6() {
-		assertEquals("Mustang", GUI.getValue(-9));
+		assertEquals("Mustang", MustangBronco.getValue(-9));
 	}
 
 }
