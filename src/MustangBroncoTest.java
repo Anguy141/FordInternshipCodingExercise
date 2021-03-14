@@ -13,32 +13,32 @@ public class MustangBroncoTest {
 
 	@Test
 	public void test1() {
-		assertEquals("Mustang", MustangBronco.getValue(3));
+		assertEquals("Mustang", MustangBroncoGUI.getValue(3));
 	}
 
 	@Test
 	public void test2() {
-		assertEquals("Bronco", MustangBronco.getValue(5));
+		assertEquals("Bronco", MustangBroncoGUI.getValue(5));
 	}
 
 	@Test
 	public void test3() {
-		assertEquals("MustangBronco", MustangBronco.getValue(15));
+		assertEquals("MustangBronco", MustangBroncoGUI.getValue(15));
 	}
 
 	@Test
 	public void test4() {
-		assertEquals("1", MustangBronco.getValue(1));
+		assertEquals("1", MustangBroncoGUI.getValue(1));
 	}
 
 	@Test
 	public void test5() {
-		assertEquals("MustangBronco", MustangBronco.getValue(0));
+		assertEquals("MustangBronco", MustangBroncoGUI.getValue(0));
 	}
 
 	@Test
 	public void test6() {
-		assertEquals("Mustang", MustangBronco.getValue(-9));
+		assertEquals("Mustang", MustangBroncoGUI.getValue(-9));
 	}
 
 }

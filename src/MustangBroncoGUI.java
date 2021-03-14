@@ -14,10 +14,10 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.*;
 
-public class MustangBronco implements ActionListener {
+public class MustangBroncoGUI implements ActionListener {
 
 	public static void main(String[] args) {
-		new MustangBronco();
+		new MustangBroncoGUI();
 
 	}
 
@@ -29,18 +29,26 @@ public class MustangBronco implements ActionListener {
 	private JTextField input;
 	private JLabel output;
 	private JLabel message;
+	
+	private String enterInt = "Enter an Integer:";
+	private String plsEnterInt = "Please enter an Integer";
+	private String startStr = "Start";
+	private String clearStr = "Clear";
+	private String titleStr = "Mustang Bronco GUI";
+	private String emptyStr = "";
+	
 
 	/*
 	 * This is the constructor used to initialize all the variables and produce the
 	 * GUI.
 	 */
-	public MustangBronco() {
+	public MustangBroncoGUI() {
 		frame = new JFrame();
 		frame.setPreferredSize(new Dimension(400, 300));
 		panel = new JPanel();
 		layout = new GridLayout(0, 1);
 
-		message = new JLabel("Enter an Integer:");
+		message = new JLabel(enterInt);
 		panel.add(message);
 
 		input = new JTextField();
@@ -49,14 +57,14 @@ public class MustangBronco implements ActionListener {
 		output = new JLabel();
 		panel.add(output);
 
-		start = new JButton("Start");
-		start.setActionCommand("Start");
+		start = new JButton(startStr);
+		start.setActionCommand(startStr);
 		start.addActionListener(this);
 		frame.getRootPane().setDefaultButton(start);
 		panel.add(start);
 
-		clear = new JButton("Clear");
-		clear.setActionCommand("Clear");
+		clear = new JButton(clearStr);
+		clear.setActionCommand(clearStr);
 		clear.addActionListener(this);
 		panel.add(clear);
 
@@ -65,7 +73,7 @@ public class MustangBronco implements ActionListener {
 
 		frame.add(panel, BorderLayout.CENTER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setTitle("Mustang Bronco GUI");
+		frame.setTitle(titleStr);
 		frame.pack();
 		frame.setVisible(true);
 
@@ -86,11 +94,11 @@ public class MustangBronco implements ActionListener {
 				int num = Integer.parseInt(input.getText());
 				output.setText(getValue(num));
 			} catch (NumberFormatException ex) {
-				output.setText("please enter an Integer");
+				output.setText(plsEnterInt);
 			}
 		} else if (e.getSource() == clear) {
-			input.setText("");
-			output.setText("");
+			input.setText(emptyStr);
+			output.setText(emptyStr);
 		}
 
 	}
@@ -107,7 +115,7 @@ public class MustangBronco implements ActionListener {
 				int num = Integer.parseInt(input.getText());
 				output.setText(getValue(num));
 			} catch (NumberFormatException ex) {
-				output.setText("please enter an Integer");
+				output.setText(plsEnterInt);
 			}
 
 		}
