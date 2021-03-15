@@ -12,3 +12,5 @@ on the following algorithm:
 2. If the number is divisible by 5, display “Bronco”.
 3. If the number is divisible by both 3 and 5, display “MustangBronco”
 4. For all other numbers, display the number itself.
+
+I coded this exercise with Java and on eclipse as my IED.
